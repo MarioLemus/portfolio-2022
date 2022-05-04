@@ -1,0 +1,137 @@
+:root {
+  --text-big: 45px;
+  --text-body: 16px;
+}
+
+body {
+  font-size: var(--text-body);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  overflow-x: hidden;
+}
+
+section {
+  margin: 5rem 0;
+}
+
+.container {
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.7rem;
+}
+
+.header-title {
+  margin: 1rem 0;
+}
+
+.hero-subtitle {
+  color: rgba(189, 56, 189, 0.7);
+  margin-bottom: -0.5rem;
+  font-size: 20px;
+}
+
+.hero-title {
+  line-height: 1;
+  margin: 0;
+  font-size: 100px;
+}
+
+.hero-social-media-container {
+  display: flex;
+  align-items: center;
+}
+
+.hero-contact {
+  margin-left: 1rem;
+}
+
+.hero-icon {
+  background-color: rgb(240, 133, 240);
+  border-radius: 50%;
+  padding: 4px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.hero-highlight {
+  background-color: black;
+  color: white;
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+.project-container {
+  height: 300px;
+  width: 100%;
+  border: 2px solid black;
+}
+
+.project-header {
+  height: 3rem;
+  border-bottom: 2px solid black;
+}
+
+.project-info {
+  display: flex;
+}
+
+.project-img-container {
+  width: 50%;
+  border-right: 2px solid black;
+  height: calc(300px - 3rem);
+}
+
+.project-data {
+  width: 50%;
+  border-left: 2px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-use-technologies-container {
+  height: 3.5rem;
+  border-bottom: 2px solid black;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.project-tech {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.5rem;
+  background-color: violet;
+  padding: 6px 14px;
+  border-radius: 15px;
+  animation: tech-carrousel 9s linear infinite;
+}
+
+.stack-container {
+  display: flex;
+}
+
+.stack {
+  width: 50%;
+}
+
+@keyframes tech-carrousel {
+  0% {
+    transform: translateX(250px);
+
+  }
+
+  100% {
+    transform: translateX(calc(-260px * 2));
+
+  }
+}
+
+.project-description {}
