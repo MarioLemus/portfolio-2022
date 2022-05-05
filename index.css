@@ -13,6 +13,16 @@ section {
   margin: 5rem 0;
 }
 
+picture {
+  display: flex;
+  align-items: center;
+}
+
+img {
+  object-fit: cover;
+  margin-right: 0.5rem;
+}
+
 .container {
   max-width: 550px;
   margin: 0 auto;
