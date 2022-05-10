@@ -1,5 +1,16 @@
 const socialMediaContainer = document.getElementById('hero-social-media-container')
-const technologiesContainer = document.getElementById('project-use-technologies-container')
+const leftArrowButton = document.getElementById('left-arrow')
+const currentProjectPage = document.getElementById('current-project')
+
+const rightArrowButton = document.getElementById('right-arrow')
+const projectTitle = document.getElementById('project-title')
+const projectTechnologies = document.getElementById('project-use-technologies-container')
+
+const projectDescription = document.getElementById('project-description')
+const projectImg = document.getElementById('project-img')
+
+
+
 
 const socialMediaContent = `
 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right" width="45" height="40" viewBox="0 0 24 24" stroke-width="1.4" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -33,13 +44,71 @@ const socialMediaContent = `
 
 socialMediaContainer.innerHTML = socialMediaContent
 
+const left = `
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-left" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.7" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <line x1="5" y1="12" x2="19" y2="12" />
+  <line x1="5" y1="12" x2="9" y2="16" />
+  <line x1="5" y1="12" x2="9" y2="8" />
+</svg>
+`
+const right = `
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.7" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <line x1="5" y1="12" x2="19" y2="12" />
+  <line x1="15" y1="16" x2="19" y2="12" />
+  <line x1="15" y1="8" x2="19" y2="12" />
+</svg>
+`
+
 const createTechContainer = (value) => `<div class='project-tech'>${value}</div>`
 
-technologiesContainer.innerHTML = `
- ${createTechContainer('Javascript')}
- ${createTechContainer('css')}
- ${createTechContainer('html')}
- ${createTechContainer('html')}
- ${createTechContainer('html')}
- ${createTechContainer('html')}
-`
+
+leftArrowButton.innerHTML = left
+rightArrowButton.innerHTML = right
+
+const setProjectData = (title, desc, techArray = []) => {
+  projectTitle.innerHTML = `${title}`
+  projectDescription.innerHTML = `${desc}`
+  techArray.forEach(tech => {
+    projectTechnologies.innerHTML += createTechContainer(tech)
+  })
+}
+
+
+const project = [
+  {
+    id: 1,
+    projectData: () => setProjectData('Allnovelist', 'Plataforma de entretenimiento, cuyo nicho principal es la literatura amateur', ['React', 'Html5', 'Css3', 'Strapi'])
+  },
+  {
+    id: 2,
+    projectData: () => setProjectData('JsMethodLearner', 'Aplicacion en la que se explica los metodos mas utilizados de javascript', ['Next js', 'Html5', 'Css3'])
+  }
+]
+
+currentProjectPage.innerHTML = 1
+
+window.addEventListener('load', () => {
+  project[0].projectData()
+})
+
+/* 
+ * these functions change the state of the current project page (pagination state),
+ * and the project data (general project info -> title, description, tech etc.)
+*/
+leftArrowButton.addEventListener('click', () => {
+  if (currentProjectPage.innerHTML > 1) {
+    projectTechnologies.innerHTML = ''
+    currentProjectPage.innerHTML--
+    project[currentProjectPage.innerHTML - 1].projectData()
+  }
+})
+
+rightArrowButton.addEventListener('click', () => {
+  if (currentProjectPage.innerHTML < project.length) {
+    projectTechnologies.innerHTML = ''
+    currentProjectPage.innerHTML++
+    project[currentProjectPage.innerHTML - 1].projectData()
+  }
+})
