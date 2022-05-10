@@ -32,20 +32,30 @@
     </article>
     <section>
       <h2>Conoce un poco sobre mí</h2>
-      <p>Soy un desarrollador de software, totalmente autodidacta y con grandes ambiciones, que garantizara el
+      <p class="about-me">Soy un desarrollador de software, totalmente autodidacta y con grandes ambiciones, que
+        garantizara el
         desarrollo de productos tecnologicas de alta calidad.</p>
     </section>
     <section>
       <h2>Proyectos en los que he trabajado y continuo trabajando</h2>
       <div class="project-container">
         <header class="project-header">
-          s
+          <p id="project-title" class="project-title"></p>
+          <div class="project-pagination-container">
+            <button id="left-arrow" class="project-pagination-button"></button>
+            <p id="current-project" class="current-project">1</p>
+            <button id="right-arrow" class="project-pagination-button"></button>
+          </div>
         </header>
         <div class="project-info">
-          <div class="project-img-container"></div>
+          <div class="project-description-container">
+            <p id="project-description"></p>
+          </div>
           <div class="project-data">
-            <div id="project-use-technologies-container" class="project-use-technologies-container">a</div>
-            <div class="project-description">b</div>
+            <div id="project-use-technologies-container" class="project-use-technologies-container"></div>
+            <div>
+              <img id="project-img">
+            </div>
           </div>
         </div>
       </div>
