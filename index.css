@@ -1,5 +1,6 @@
 :root {
-  --text-big: 45px;
+  --text-huge: 100px;
+  --text-big: 65px;
   --text-body: 16px;
 }
 
@@ -47,7 +48,13 @@ img {
 .hero-title {
   line-height: 1;
   margin: 0;
-  font-size: 100px;
+  font-size: var(--text-big);
+}
+
+@media screen and (min-width: 600px) {
+  .hero-title {
+    font-size: var(--text-huge);
+  }
 }
 
 .hero-social-media-container {
@@ -77,6 +84,12 @@ img {
   padding: 0 1rem;
 }
 
+/* aboutme */
+.about-me {
+  /*max-width -> 80 characters*/
+  max-width: 80ch;
+}
+
 .project-container {
   height: 300px;
   width: 100%;
@@ -86,15 +99,44 @@ img {
 .project-header {
   height: 3rem;
   border-bottom: 2px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 1rem;
+}
+
+.project-pagination-container {
+  margin: 0 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.project-pagination-button {
+  width: 30px;
+  height: 30px;
+  border: 2px solid black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.current-project {
+  margin: 0 0.5rem;
 }
 
 .project-info {
   display: flex;
 }
 
-.project-img-container {
+.project-description-container {
   width: 50%;
-  border-right: 2px solid black;
   height: calc(300px - 3rem);
 }
 
@@ -143,5 +185,3 @@ img {
 
   }
 }
-
-.project-description {}
