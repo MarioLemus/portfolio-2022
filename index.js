@@ -67,23 +67,28 @@ const createTechContainer = (value) => `<div class='project-tech'>${value}</div>
 leftArrowButton.innerHTML = left
 rightArrowButton.innerHTML = right
 
-const setProjectData = (title, desc, techArray = []) => {
+const setProjectData = (title, desc, techArray = [], imgPath) => {
   projectTitle.innerHTML = `${title}`
   projectDescription.innerHTML = `${desc}`
   techArray.forEach(tech => {
     projectTechnologies.innerHTML += createTechContainer(tech)
   })
+  projectImg.src = imgPath
 }
 
 
 const project = [
   {
     id: 1,
-    projectData: () => setProjectData('Allnovelist', 'Plataforma de entretenimiento, cuyo nicho principal es la literatura amateur', ['React', 'Html5', 'Css3', 'Strapi'])
+    projectData: () => setProjectData('Allnovelist', 'Plataforma de entretenimiento, cuyo nicho principal es la literatura amateur.', ['React', 'Html5', 'Css3', 'Strapi'], './img/projects/allnovelist.png'),
   },
   {
     id: 2,
-    projectData: () => setProjectData('JsMethodLearner', 'Aplicacion en la que se explica los metodos mas utilizados de javascript', ['Next js', 'Html5', 'Css3'])
+    projectData: () => setProjectData('JsMethodLearner', 'Aplicacion en la que se explica los metodos mas utilizados de javascript.', ['Next js', 'Html5', 'Css3'], './img/projects/js-method-learner.png')
+  },
+  {
+    id: 3,
+    projectData: () => setProjectData('siHam landing page', 'Pagina de bienvenida para un negocio de comida.', ['React js', 'Html5', 'Css3'], './img/projects/si-ham-landing.png')
   }
 ]
 

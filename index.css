@@ -51,12 +51,6 @@ img {
   font-size: var(--text-big);
 }
 
-@media screen and (min-width: 600px) {
-  .hero-title {
-    font-size: var(--text-huge);
-  }
-}
-
 .hero-social-media-container {
   display: flex;
   align-items: center;
@@ -140,6 +134,10 @@ img {
   height: calc(300px - 3rem);
 }
 
+.project-description {
+  padding: 1.5rem 1rem;
+}
+
 .project-data {
   width: 50%;
   border-left: 2px solid black;
@@ -153,6 +151,11 @@ img {
   display: flex;
   align-items: center;
   overflow: hidden;
+}
+
+.project-img {
+  object-fit: cover;
+  width: 100%;
 }
 
 .project-tech {
@@ -174,14 +177,21 @@ img {
   width: 50%;
 }
 
+
 @keyframes tech-carrousel {
   0% {
-    transform: translateX(250px);
+    transform: translateX(270px);
 
   }
 
   100% {
     transform: translateX(calc(-260px * 2));
 
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .hero-title {
+    font-size: var(--text-huge);
   }
 }
