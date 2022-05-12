@@ -88,7 +88,7 @@ const project = [
   },
   {
     id: 3,
-    projectData: () => setProjectData('siHam landing page', 'Pagina de bienvenida para un negocio de comida.', ['React js', 'Html5', 'Css3'], './img/projects/si-ham-landing.png')
+    projectData: () => setProjectData('Si-Ham landing page', 'Pagina de bienvenida para un negocio de comida.', ['React js', 'Html5', 'Css3'], './img/projects/si-ham-landing.png')
   }
 ]
 
