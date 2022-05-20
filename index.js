@@ -84,11 +84,15 @@ const project = [
   },
   {
     id: 2,
-    projectData: () => setProjectData('JsMethodLearner', 'Aplicacion en la que se explica los metodos mas utilizados de javascript.', ['Next js', 'Html5', 'Css3'], './img/projects/js-method-learner.png')
+    projectData: () => setProjectData('JsMethodLearner', 'Aplicación en la que se busca explicar los métodos más utilizados de JavaScript de una manera más simple y sencilla de entender.', ['Next js', 'Html5', 'Css3'], './img/projects/js-method-learner.png')
   },
   {
     id: 3,
-    projectData: () => setProjectData('Si-Ham landing page', 'Pagina de bienvenida para un negocio de comida.', ['React js', 'Html5', 'Css3'], './img/projects/si-ham-landing.png')
+    projectData: () => setProjectData('Si-Ham landing page', 'Página de bienvenida para un negocio de comida, local.', ['React js', 'Html5', 'Css3'], './img/projects/si-ham-landing.png')
+  },
+  {
+    id: 4,
+    projectData: () => setProjectData('Automata', 'Aplicación de consola cuyo propósito principal es, automatizar procesos repetitivos y almacenarlos de una manera simple he intuitiva. <br/><br/>' + '(Actualmente, en fase de planeación)', ['Node js'], './img/projects/automata-hub-temp.png')
   }
 ]
 
