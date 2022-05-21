@@ -88,7 +88,7 @@ img {
 }
 
 .project-container {
-  height: 300px;
+  min-height: 300px;
   width: 100%;
   border: 2px solid black;
 }
@@ -134,7 +134,7 @@ img {
 
 .project-description-container {
   width: 50%;
-  height: calc(300px - 3rem);
+  min-height: calc(300px - 3rem);
 }
 
 .project-description {
